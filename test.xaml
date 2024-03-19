@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1130.4,1174.4" sap2010:WorkflowViewState.IdRef="test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="test" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="406,594" sap2010:WorkflowViewState.IdRef="test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -36,6 +36,7 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -87,15 +88,19 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="592,1109.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="416,529.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -131,7 +136,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,134.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -171,63 +176,81 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="529.6,130.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Error\Erorr_&quot;+datetime.Now.ToString(&quot;ddMMyyyy_hhmm&quot;)+&quot;.png&quot;]" />
-    <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="apiwutkit@allnow.co.th" DisplayName="Use Outlook 365" EmailAddress="apiwutkit@allnow.co.th" sap:VirtualizedContainerService.HintSize="529.6,760.8" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" SharedMailbox="&quot;inbox&quot;" UseConnectionService="False">
-      <umab:ExchangeApplicationCard.ApplicationId>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" Value="" />
-        </InArgument>
-      </umab:ExchangeApplicationCard.ApplicationId>
-      <umab:ExchangeApplicationCard.Body>
-        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,512.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,94" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,322.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,132" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Error\Erorr_&quot;+datetime.Now.ToString(&quot;ddMMyyyy_hhmm&quot;)+&quot;.png&quot;]" />
+          <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="apiwutkit@allnow.co.th" DisplayName="Use Outlook 365" EmailAddress="apiwutkit@allnow.co.th" sap:VirtualizedContainerService.HintSize="354,106" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" SharedMailbox="&quot;inbox&quot;" UseConnectionService="False">
+            <umab:ExchangeApplicationCard.ApplicationId>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </umab:ExchangeApplicationCard.ApplicationId>
+            <umab:ExchangeApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="495.3333333333333,511.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,426.4" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Error [RPA] Export All Order from loginext to FTP &quot;+datetime.Today.ToString(&quot;dd/MM/yyyy&quot;)]" To="allnow_rpa@allnow.co.th" UseDocumentAsBody="False">
+                    <umab:SendMailX.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                        <InArgument x:TypeArguments="x:String">["C:\Documents\UiPath\Loginext\Error\Erorr_"+datetime.Now.ToString("ddMMyyyy_hh")+".png"]</InArgument>
+                      </scg:List>
+                    </umab:SendMailX.Files>
+                    <umab:SendMailX.HtmlBodyFromFile>
+                      <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
+                        <umabh:HtmlContentArgument.RuntimeImages>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </umabh:HtmlContentArgument.RuntimeImages>
+                        <umabh:HtmlContentArgument.ValueMappings>
+                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                            <umabh:HtmlTextValueMapping Name="Date_Today" Value="[datetime.Today.ToString(&quot;dd/MM/yyyy&quot;)]" />
+                          </scg:List>
+                        </umabh:HtmlContentArgument.ValueMappings>
+                      </umabh:HtmlContentArgument>
+                    </umab:SendMailX.HtmlBodyFromFile>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umab:SendMailX>
+                </Sequence>
+              </ActivityAction>
+            </umab:ExchangeApplicationCard.Body>
+            <umab:ExchangeApplicationCard.TenantId>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" Value="" />
+              </InArgument>
+            </umab:ExchangeApplicationCard.TenantId>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,426.4" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Error [RPA] Export All Order from loginext to FTP &quot;+datetime.Today.ToString(&quot;dd/MM/yyyy&quot;)]" To="allnow_rpa@allnow.co.th" UseDocumentAsBody="False">
-              <umab:SendMailX.Files>
-                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                  <InArgument x:TypeArguments="x:String">["C:\Documents\UiPath\Loginext\Error\Erorr_"+datetime.Now.ToString("ddMMyyyy_hh")+".png"]</InArgument>
-                </scg:List>
-              </umab:SendMailX.Files>
-              <umab:SendMailX.HtmlBodyFromFile>
-                <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
-                  <umabh:HtmlContentArgument.RuntimeImages>
-                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                  </umabh:HtmlContentArgument.RuntimeImages>
-                  <umabh:HtmlContentArgument.ValueMappings>
-                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
-                      <umabh:HtmlTextValueMapping Name="Date_Today" Value="[datetime.Today.ToString(&quot;dd/MM/yyyy&quot;)]" />
-                    </scg:List>
-                  </umabh:HtmlContentArgument.ValueMappings>
-                </umabh:HtmlContentArgument>
-              </umab:SendMailX.HtmlBodyFromFile>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </umab:SendMailX>
-          </Sequence>
-        </ActivityAction>
-      </umab:ExchangeApplicationCard.Body>
-      <umab:ExchangeApplicationCard.TenantId>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" Value="" />
-        </InArgument>
-      </umab:ExchangeApplicationCard.TenantId>
+          </umab:ExchangeApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </umab:ExchangeApplicationCard>
+    </ui:CommentOut>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="354,159.33333333333334" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe" />
   </Sequence>
 </Activity>
